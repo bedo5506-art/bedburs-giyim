@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bedburs Giyim | Ödeme Sayfası</title>
+  <style>
+    body {
+      background-color: black;
+      color: gold;
+      font-family: 'Georgia', serif;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      padding: 30px 20px;
+    }
+    header h1 {
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+    header p {
+      font-size: 18px;
+      color: #ccc;
+    }
+    .iban-box {
+      background-color: #111;
+      padding: 30px 20px;
+      border: 1px solid gold;
+      border-radius: 12px;
+      max-width: 500px;
+      margin: 30px auto;
+    }
+    .iban-box p {
+      font-size: 16px;
+      color: white;
+    }
+    button {
+      margin-top: 10px;
+      padding: 12px 20px;
+      background-color: gold;
+      color: black;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    footer {
+      margin-top: 50px;
+      font-size: 14px;
+      color: gray;
+      padding-bottom: 30px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>BEDBURS GİYİM</h1>
+    <p>Lüks ve özel tasarımlar, doğrudan sizlere.</p>
+    <p>⚠️ Siparişler için aşağıdaki ödeme bilgilerini kullanınız.</p>
+  </header>
+
+  <section class="iban-box">
+    <h2 style="font-size: 24px;">💳 IBAN ile Ödeme</h2>
+    <p><strong>Hesap Sahibi:</strong> Bedirhan Çakıroğlu</p>
+    <p><strong>Banka:</strong> Enpara (QNB Finansbank)</p>
+    <p><strong>IBAN:</strong> TR52 0011 1000 0000 0143 8753 07</p>
+
+    <button onclick="
+      try {
+        navigator.clipboard.writeText('TR52001110000000143875307');
+        alert('IBAN başarıyla kopyalandı ✅');
+      } catch {
+        alert('Kopyalama başarısız oldu. Lütfen manuel kopyalayınız:\nTR52 0011 1000 0000 0143 8753 07');
+      }
+    ">
+      IBAN'ı Kopyala
+    </button>
+
+    <p style="margin-top: 20px; font-size: 14px; color: gray;">
+      Açıklama kısmına <strong>adınızı ve ürün ismini</strong> yazmayı unutmayın.
+    </p>
+  </section>
+
+  <footer>
+    © 2025 Bedburs Wear. Tüm hakları saklıdır.
+  </footer>
+
+</body>
+</html>
